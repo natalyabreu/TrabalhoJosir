@@ -20,7 +20,7 @@ if st.button('Consultar Filmes'):
         link2 = 'https://www.omdbapi.com/?apikey=90c1591a&s=' + first_actor  # Search for movies by first actor's name
         dvd2 = requests.get(link2)
         search_results = dvd2.json()
-        dados = {'atores': Actors, 'Gênero': Genre, 'Classificação indicativa': Rated, 'Primeiro ator': First_actor, 'outros filmes dele':}
+        dados = {'atores': Actors, 'Gênero': Genre, 'Classificação indicativa': Rated, 'Primeiro ator': First_actor}
         lista.append(dados)       
         if search_results['Response'] == 'True' and search_results['totalResults'] != '0':
             movies = search_results['Search'][:3]  # Limit the number of movies to 3

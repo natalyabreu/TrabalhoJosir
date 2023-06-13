@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 import streamlit as st
 nome_do_filme = st.text_input('escreva um filme: ')
 if st.button('Consultar Filmes'):

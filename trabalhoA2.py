@@ -1,6 +1,6 @@
 import requests
 import streamlit as st
-nome_do_filme = st.text_input('escreva um filme: ')
+nome_do_filme = st.text_input('Choose Your Movie: ')
 if st.button('Consultar Filmes'):
 
     #é recomendado procurar filmes populares. Link fonte não possui um banco de dados extenso

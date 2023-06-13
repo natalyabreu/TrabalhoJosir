@@ -27,6 +27,6 @@ if st.button('Consultar Filmes'):
             st.write("Primeiro ator: ", first_actor)
             st.write("Outros filmes dele:")
             for movie in movies:
-                print(movie['Title'])
+               st.write(movie['Title'])
         else:
           st.write("Não foram encontrados outros filmes para este ator.")

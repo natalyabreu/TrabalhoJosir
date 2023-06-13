@@ -12,10 +12,10 @@ if st.button('Consultar Filmes'):
     if filme['Response'] == 'True':
         actors = filme['Actors'].split(', ')
         first_actor = actors[0]
-        print("Atores: ", filme['Actors'])
-        print("Gênero: ", filme['Genre'])
-        print("Classificação Indicativa: ", filme['Rated'])
-        print("\n")
+        st.write("Atores: ", filme['Actors'])
+        st.write("Gênero: ", filme['Genre'])
+        st.write("Classificação Indicativa: ", filme['Rated'])
+        st.write("\n")
 
         link2 = 'https://www.omdbapi.com/?apikey=90c1591a&s=' + first_actor  # Search for movies by first actor's name
         dvd2 = requests.get(link2)
@@ -24,9 +24,9 @@ if st.button('Consultar Filmes'):
         if search_results['Response'] == 'True' and search_results['totalResults'] != '0':
             movies = search_results['Search'][:3]  # Limit the number of movies to 3
 
-            print("Primeiro ator: ", first_actor)
-            print("Outros filmes dele:")
+            st.write("Primeiro ator: ", first_actor)
+            st.write("Outros filmes dele:")
             for movie in movies:
                 print(movie['Title'])
         else:
-            print("Não foram encontrados outros filmes para este ator.")
+          st.write("Não foram encontrados outros filmes para este ator.")

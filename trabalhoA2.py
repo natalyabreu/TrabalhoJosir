@@ -22,7 +22,6 @@ if st.button('Consultar Filmes'):
          
         if search_results['Response'] == 'True' and search_results['totalResults'] != '0':
             movies = search_results['Search'][:3]  # Limit the number of movies to 3
-            df = pd.DataFrame(lista)
             st.write(df)
             st.write("Primeiro ator: ", first_actor)
             st.write("Outros filmes dele:")

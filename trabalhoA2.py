@@ -1,6 +1,6 @@
 import requests
 
-nome_do_filme = input('escreva um filme: ')
+nome_do_filme = st.text_input('escreva um filme: ')
 #é recomendado procurar filmes populares. Link fonte não possui um banco de dados extenso
 link = 'https://www.omdbapi.com/?apikey=90c1591a&t=' + nome_do_filme
 dvd = requests.get(link)

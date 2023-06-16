@@ -21,7 +21,7 @@ if st.button('Consultar Filmes'):
         search_results = dvd2.json()
          
         if search_results['Response'] == 'True' and search_results['totalResults'] != '0':
-            movies = search_results['Search'][:3]  # Limit the number of movies to 3
+            movies = search_results['Search']  # Limit the number of movies to 3
             st.write("Primeiro ator: ", first_actor)
             st.write("Outros filmes dele:")
             for movie in movies:
